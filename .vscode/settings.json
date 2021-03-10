@@ -1,0 +1,4 @@
+{
+    "python.pythonPath": "worvenv\\Scripts\\python.exe",
+    "git.ignoreLimitWarning": true
+}

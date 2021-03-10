@@ -1,0 +1,369 @@
+{% extends 'layout.html' %}
+{% load staticfiles %}
+{% block content %}
+<section id="banner">
+    <h2 class="ir_so">영어 단어 분석</h2>
+    <div class="banner_menu">
+        <div class="container">
+            <div class="row">
+                <div class="bm_right">
+                    <ul>
+                        <li class="purple">
+                            <p class="upload"><a href="{% url 'analysis_text:userinputform' %}">파일 업로드</a></p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- slider -->
+    <div class="slider">
+           <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide ss1">
+                        <div class="container">
+                            <div class="row">
+                                <h2 style="margin-top: 80px;">빅데이터 분석을 기반한 영어 단어장 <br>자동 생성 웹 서비스</h2>
+                                <p style="margin-top: 90px;">엄청난 효율을 느껴보세요!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide ss2">
+                        <div class="container">
+                            <div class="row">
+                                <h2 style="margin-top: 160px;">워다타 개발자</h2>
+                                <p style="margin-top: -30px;">06번 투표해주세요^~^</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide ss3">
+                        <div class="container">
+                            <div class="row" style="text-align: center;">
+                                <h2 style="color: #000;">영어 단어를 데이터로 분석해보았습니다.</h2>
+                                <p style="margin-top: 120px; color: #000;">빈도수를 확인해보세요!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+        <!-- //slider -->
+</section>
+<!-- //banner -->
+
+<section id="wordata">
+    <div class="container">
+        <div class="row">
+           
+            <!-- wordata -->
+            <div class="wordata">
+                <h2 class="ir_so">영어 단어 순위</h2>
+                <div class="wordata_title">
+                    <ul>
+                        <li class="active"><a href="#">전체 단어</a></li>
+                        <li><a href="#">수능특강</a></li>
+                        <li><a href="#">모의고사</a></li>
+                        <li><a href="#">어려운 단어</a></li>
+                    </ul>
+                </div>
+                
+                <!-- wordata_chart -->
+                <div class="wordata_chart">
+                    <div class="chart_cont1">
+                        <div>
+                            <div class="poster">
+                                <p>1등 단어</p>
+                                <div class="rank"><strong>1</strong></div>
+                            </div>
+                            <div class="infor">
+                                <h3><strong>품사. 뜻</strong></h3>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="poster">
+                                <p>2등 단어</p>
+                                <div class="rank"><strong>2</strong></div>
+                            </div>
+                            <div class="infor">
+                                <h3><strong>품사. 뜻</strong></h3>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="poster">
+                                <p>3등 단어</p>
+                                <div class="rank"><strong>3</strong></div>
+                            </div>
+                            <div class="infor">
+                                <h3><strong>품사. 뜻</strong></h3>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="poster">
+                                <p>4등 단어</p>
+                                <div class="rank"><strong>4</strong></div>
+                            </div>
+                            <div class="infor">
+                                <h3><strong>품사. 뜻</strong></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //chart_cont1-->
+                    
+                    <div class="chart_cont2">
+                        <div>
+                            <div class="poster">
+                                <p>process</p>
+                                <div class="rank"><strong>1</strong></div>
+                            </div>
+                            <div class="infor">
+                                <h3><strong>N. 과정</strong></h3>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="poster">
+                                <p>product</p>
+                                <div class="rank"><strong>2</strong></div>
+                            </div>
+                            <div class="infor">
+                                <h3><strong>N. 생산물, 상품, 제품</strong></h3>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="poster">
+                                <p>provide</p>
+                                <div class="rank"><strong>3</strong></div>
+                            </div>
+                            <div class="infor">
+                                <h3><strong>V. 제공하다, 주다</strong></h3>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="poster">
+                                <p>likely</p>
+                                <div class="rank"><strong>4</strong></div>
+                            </div>
+                            <div class="infor">
+                                <h3><strong>adj. ~ 할 것 같은</strong></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //chart_cont2-->
+                    
+                    <div class="chart_cont3">
+                        <div>
+                            <div class="poster">
+                                <p>cultural</p>
+                                <div class="rank"><strong>1</strong></div>
+                            </div>
+                            <div class="infor">
+                                <h3><strong>adj. 문화와 관련된</strong></h3>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="poster">
+                                <p>individual</p>
+                                <div class="rank"><strong>2</strong></div>
+                            </div>
+                            <div class="infor">
+                                <h3><strong>adj. 각각(개개)의</strong></h3>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="poster">
+                                <p>knowledge</p>
+                                <div class="rank"><strong>3</strong></div>
+                            </div>
+                            <div class="infor">
+                                <h3><strong>N. 지식</strong></h3>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="poster">
+                                <p>process</p>
+                                <div class="rank"><strong>4</strong></div>
+                            </div>
+                            <div class="infor">
+                                <h3><strong>N. 과정</strong></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //chart_cont3-->
+                    
+                    <div class="chart_cont4">
+                        <div>
+                            <div class="poster">
+                                <p>1등 단어</p>
+                                <div class="rank"><strong>1</strong></div>
+                            </div>
+                            <div class="infor">
+                                <h3><strong>품사. 뜻</strong></h3>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="poster">
+                                <p>2등 단어</p>
+                                <div class="rank"><strong>2</strong></div>
+                            </div>
+                            <div class="infor">
+                                <h3><strong>품사. 뜻</strong></h3>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="poster">
+                                <p>3등 단어</p>
+                                <div class="rank"><strong>3</strong></div>
+                            </div>
+                            <div class="infor">
+                                <h3><strong>품사. 뜻</strong></h3>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="poster">
+                                <p>4등 단어</p>
+                                <div class="rank"><strong>4</strong></div>
+                            </div>
+                            <div class="infor">
+                                <h3><strong>품사. 뜻</strong></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //chart_cont4-->
+                </div>
+                <!-- //wordata_chart -->
+            </div>
+            <!-- //wordata -->
+        </div>
+    </div>
+</section>
+<!-- section -->
+
+<section id="help">
+        <div class="container">
+            <div class="row">
+                <div class="help clearfix">
+                   
+                    <!-- 공지사항 -->
+                    <article class="help_box1">
+                        <h3><em>공지사항</em></h3>
+                        <div class="notice">
+                            <ul>
+                                <li class="active"><a href="#">전체 공지</a>
+                                    <ul>
+                                        <li>
+                                            <dl>
+                                                <dt><strong class="bar">전체</strong> <em>2019.10.21</em></dt>
+                                                <dd>워다타 서비스를 방문해주셔서 진심으로 감사합니다.</dd>
+                                            </dl>            
+                                        </li>
+                                        <li>
+                                            <dl>
+                                                <dt><strong class="bar">수능특강</strong> <em>2019.10.XX</em></dt>
+                                                <dd>2020 수능특강 관련 교재 영어 단어 데이터 분석 업로드</dd>
+                                            </dl>
+                                        </li>
+                                        <li>
+                                            <dl>
+                                                <dt><strong class="bar">모의고사</strong> <em>2019.10.XX</em></dt>
+                                                <dd>5개년 평가원 모의고사 영어 단어 데이터 분석 업로드</dd>
+                                            </dl>
+                                        </li>
+                                        <li>
+                                            <dl>
+                                                <dt><strong class="bar">전체</strong> <em>2019.08.26</em></dt>
+                                                <dd>워다타 개발 시작. -박결, 이은학, 신해철, 박지영, 김지인-</dd>
+                                            </dl>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </article>
+                    <!-- //공지사항 -->
+                    
+                    <!-- 관련 사이트 바로가기 -->
+                    <article class="help_box2">
+                        <h3><em>관련 사이트 바로가기</em></h3>
+                        <div class="card">
+                            <ul>
+                                <li>
+                                    <a href="http://www.ebsi.co.kr/ebs/pot/potg/BeConnected2017BookDowonload.ebs?sId=138">
+                                        <span></span>
+                                        <strong>2020 수능특강 교재</strong>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://www.kice.re.kr/boardCnts/list.do?boardID=1500236&m=0403&s=suneung">
+                                        <span></span>
+                                        <strong>평가원 모의고사 기출문제</strong>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="http://www.kice.re.kr/boardCnts/list.do?boardID=1500234&m=0403&s=suneung&searchStr=">
+                                        <span></span>
+                                        <strong>수능 시험지</strong>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </article>
+                    <!-- //관련 사이트 바로가기 -->
+                    
+                    <!-- 워다타 서비스 안내-->
+                    <article class="help_box3">
+                        <h3>워다타 서비스</h3>
+                        <div class="service">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <span class="img_svg">
+                                            <img src="{% static 'img/introduce1.png' %}" style="width: 100px; height: 100px; margin-top: 15px;" alt="1:1 문의">
+                                        </span>
+                                        <strong>1:1 문의</strong>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="developer.html">
+                                        <span class="img_svg">
+                                            <img src="{% static 'img/introduce2.png' %}" style="width: 90px; height: 90px; margin-top: 15px;" alt="개발자 소개">
+                                        </span>
+                                        <strong>개발자 소개</strong>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="img_svg">
+                                            <img src="{% static 'img/introduce3.png' %}" style="width: 90px; height: 90px; margin-top: 15px;" alt="자주묻는 질문">
+                                        </span>
+                                        <strong>자주묻는 질문</strong>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="img_svg">
+                                            <img src="{% static 'img/introduce4.png' %}" style="width: 90px; height: 90px; margin-top: 15px;" alt="서비스 안내">
+                                                <style type="text/css">
+                                                    .st0{fill:none;}
+                                                    .st1{fill:#FFFFFF;}
+                                                    .st2{fill:#755CA7;}
+                                                    .st3{fill:#1D1D1B;}
+                                                    .st4{fill:#715EA5;}
+                                                    .st5{fill:none;stroke:#FFFFFF;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;}
+                                                    .st6{fill:none;stroke:#1D1D1B;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;}
+                                                </style>
+                                        </span>
+                                        <strong>서비스 안내</strong>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </article>
+                    <!-- //워다타 서비스 안내-->
+                </div>
+            </div>
+        </div>
+    </section>
+ {% endblock %}

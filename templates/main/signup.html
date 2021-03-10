@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<!-- joinMembership -->
+<div class="joinMembership">
+    <div class="container">
+        <div class="row">
+            <div id="join_banner">
+                <div class="container">
+                    <div class="tit">
+                        <h1>&ldquo;워다타 서비스에 오신걸 진심으로 환영합니다.&rdquo;</h1>
+                    </div>
+                </div>
+            </div>
+            <!-- //login_banner -->
+            
+            <div class="joinbox">
+            <h1>회원가입</h1>
+                <form class="" action="index.html" method="post">
+                    <p>아이디</p>
+                    <input type="text" name="" placeholder=" 아이디를 입력하세요.">
+                    <p>비밀번호</p>
+                    <input type="password" name="" placeholder=" 비밀번호를 입력하세요.">
+                    <p>비밀번호 확인</p>
+                    <input type="password" name="" placeholder=" 비밀번호를 확인해주세요.">
+                    <p>이름</p>
+                    <input type="text" name="" placeholder=" 이름을 입력하세요.">
+                    <p>이메일</p>
+                    <input type="email" name="" placeholder=" 이메일을 입력하세요.">
+                    <input type="submit" name="" value="가입">
+                </form>
+            </div>
+            <!-- //joinbox -->
+        </div>
+    </div>
+</div>
+<!--  //joinMembership -->
+{% endblock %}

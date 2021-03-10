@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+
+<div class="contents" style="background: url(../../static/img/analysis_gogo_back03.jpg); background-size: cover; opacity: 0.9;">
+    <div class="container">
+        <div class="row">
+            <div class="analysis">
+               <div>
+                    <div class="gogo">
+                            <a href="{% url 'analysis_text:dataframe_words' %}"><button type="">결과 확인</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
